@@ -4,6 +4,7 @@ OSX notifications via the terminal-notifier gem for Emacs ERC.
 
 ## Installation
 
+    $ sudo gem install terminal-notifier
     $ cd ~/.emacs.d/vendor
     $ git clone git://github.com/julienXX/erc-terminal-notifier.el.git
 
