@@ -43,7 +43,6 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-;;;###autoload
 (defvar erc-terminal-notifier-command (executable-find "terminal-notifier") "The path to terminal-notifier.")
 
 (defun erc-terminal-notifier-notify (title message)
