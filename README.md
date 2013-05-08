@@ -1,10 +1,6 @@
 # erc-terminal-notifier.el
 
-Nick notifications via the terminal-notifier gem for ERC.
-
-## Overview
-
-TODO
+OSX notifications via the terminal-notifier gem for Emacs ERC.
 
 ## Installation
 
