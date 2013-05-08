@@ -1,4 +1,4 @@
-;;; erc-terminal-notifier.el --- ERC Nick highlight with terminal-notifier
+;;; erc-terminal-notifier.el --- OSX notifications via the terminal-notifier gem for Emacs ERC.
 
 ;; Copyright (c) 2013 Julien Blanchard <julien@sideburns.eu>
 
@@ -12,7 +12,7 @@
 
 ;;; Commentary:
 
-;; ERC Nick highlight with the terminal-notifier gem.
+;; OSX notifications via the terminal-notifier gem for Emacs ERC.
 ;;
 
 ;;; Install
