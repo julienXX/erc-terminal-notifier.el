@@ -43,13 +43,14 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-(defvar terminal-notifier-command (executable-find "terminal-notifier") "The path to terminal-notifier.")
+;;;###autoload
+(defvar erc-terminal-notifier-command (executable-find "terminal-notifier") "The path to terminal-notifier.")
 
-(defun notification-center (title message)
+(defun erc-terminal-notifier-notify (title message)
   "Show a message with `terminal-notifier-command`."
   (start-process "terminal-notifier"
                  "*terminal-notifier*"
-                 terminal-notifier-command
+                 erc-terminal-notifier-command
                  "-title" title
                  "-message" message
                  "-activate" "org.gnu.Emacs"))
@@ -58,11 +59,12 @@
   "Show a notification, when user's nick is mentioned."
   (when (eq match-type 'current-nick)
     (unless (posix-string-match "^\\** *Users on #" message)
-      (notification-center
+      (erc-terminal-notifier-notify
        (concat "ERC " (buffer-name (current-buffer)))
        message))))
 
-(add-hook 'erc-text-matched-hook 'erc-terminal-notifier-hook)
+(if (eq system-type 'darwin)
+    (add-hook 'erc-text-matched-hook 'erc-terminal-notifier-hook))
 
 (provide 'erc-terminal-notifier)
-;;; erc-terminal-notifier ends here
+;;; erc-terminal-notifier.el ends here
