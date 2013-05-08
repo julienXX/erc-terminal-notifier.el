@@ -55,7 +55,7 @@
                  "-message" message
                  "-activate" "org.gnu.Emacs"))
 
-(defun erc-terminal-notifier-hook (match-type nick message)
+(defun erc-terminal-notifier-text-matched (match-type nick message)
   "Show a notification, when user's nick is mentioned."
   (when (eq match-type 'current-nick)
     (unless (posix-string-match "^\\** *Users on #" message)
@@ -64,7 +64,7 @@
        message))))
 
 (if (eq system-type 'darwin)
-    (add-hook 'erc-text-matched-hook 'erc-terminal-notifier-hook))
+    (add-hook 'erc-text-matched-hook 'erc-terminal-notifier-text-matched))
 
 (provide 'erc-terminal-notifier)
 ;;; erc-terminal-notifier.el ends here
