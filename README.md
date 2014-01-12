@@ -20,7 +20,7 @@ Note: it's also available in [MELPA](http://melpa.milkbox.net)
 In your Emacs config:
 
     (add-to-list 'load-path "~/.emacs.d/vendor/erc-terminal-notifier.el")
-    (require erc-terminal-notifier)
+    (require 'erc-terminal-notifier)
 
 ## License
 
