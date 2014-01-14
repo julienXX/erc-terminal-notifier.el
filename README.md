@@ -18,7 +18,7 @@ OSX notifications via the [terminal-notifier gem](https://github.com/alloy/termi
 
         $ brew install terminal-notifier
 
-### Install the package:
+### Install the package
 
     $ cd ~/.emacs.d/vendor
     $ git clone git://github.com/julienXX/erc-terminal-notifier.el.git
