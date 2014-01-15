@@ -70,7 +70,7 @@
     (unless (posix-string-match "^\\** *Users on #" message)
       (erc-terminal-notifier-notify
        (concat "ERC " (buffer-name (current-buffer)))
-       message))))
+       (concat "\\<" (nth 0 (erc-parse-user nick)) "> " message)))))
 
 (if (eq system-type 'darwin)
     (add-hook 'erc-text-matched-hook 'erc-terminal-notifier-text-matched))
