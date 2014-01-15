@@ -21,6 +21,7 @@
 ;;
 ;; $ sudo gem install terminal-notifier
 ;; or download a binary from here https://github.com/alloy/terminal-notifier/downloads
+;; or $ brew install terminal-notifier
 ;;
 ;; Install the package:
 ;;
